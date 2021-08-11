@@ -1,10 +1,10 @@
 <h1>Editing Book</h1>
 <%= form_with model:@book, local:true do |f| %>
- <div class="field">
+ <div class="field-edit">
   <p>Title</p>
-  <%= f.text_field:title %>
+  <div class="title-field"><%= f.text_field:title %></div >
  </div>
- <div class="field">
+ <div class="field-edit">
   <p>Body</p>
   <%= f.text_area:body %>
  </div>

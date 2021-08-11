@@ -22,16 +22,25 @@
 
 <h2 class="post">New book</h2>
 <% if @book.errors.any? %>
- <%= @book.errors.count %>errors prohibited this book from being saved:
- <% @book.errors.full_messages.each do |message| %>
-  <%= message %>
- <% end %>
+  <div class="error-box">
+   <h2 class="error-title"><%= @book.errors.count %>errors prohibited this book from being saved:</h2>
+   <ul>
+    <% @book.errors.full_messages.each do |message| %>
+     <li><%= message %></li>
+    <% end %>
+   </ul>
+  </div>
 <% end %>
 
 <%= form_with model: @book, local:true do |f| %>
-  <p>Title</p>
-  <%= f.text_field :title %>
-  <p>Body</p>
-  <%= f.text_area :body %>
+  <div class="field">
+   <p>Title</p>
+   <%= f.text_field :title %>
+  </div>
+  
+  <div class="field">
+   <p>Body</p>
+   <%= f.text_area :body %>
+  </div>
   <div class="btn"><%= f.submit 'Create Book' %></div>
 <% end %>

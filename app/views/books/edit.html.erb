@@ -20,6 +20,6 @@
    <div class="field-label"><%= f.label :body %></div>
    <div class="field-area"><%= f.text_area :body %></div>
   </div>
-  <div class="btn"><%= f.submit 'Create Book' %></div>
+  <div class="btn"><%= f.submit 'Update Book' %></div>
 <% end %>
-<p><span><%= link_to "Show", books_path %></span> | <span><%= link_to "Back", books_path %></span></p>
+<p><span><%= link_to "Show", book_path(@book.id) %></span> | <span><%= link_to "Back", books_path %></span></p>

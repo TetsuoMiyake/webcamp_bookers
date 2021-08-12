@@ -11,9 +11,9 @@
   <tr>
    <td align="left"><%= book.title %></td>
    <td align="left"><%= book.body %></td>
-   <td><%=link_to "show", book_path(book.id) %></td>
-   <td><%= link_to "edit", edit_book_path(book.id) %></td>
-   <td><%= link_to "destroy", book_path(book.id), method: :delete, data: { confirm: 'Are you sure?' } %><td>
+   <td><%=link_to "Show", book_path(book.id) %></td>
+   <td><%= link_to "Edit", edit_book_path(book.id) %></td>
+   <td><%= link_to "estroy", book_path(book.id), method: :delete, data: { confirm: 'Are you sure?' } %><td>
   </tr>
  <% end %>
 
@@ -34,13 +34,13 @@
 
 <%= form_with model: @book, local:true do |f| %>
   <div class="field">
-   <%= f.label :title %>
-   <%= f.text_field :title %></p>
+   <div class="field-label"><%= f.label :title %></div>
+   <div class="field-box"><%= f.text_field :title %></div>
   </div>
 
   <div class="field">
-   <%= f.label :body %>
-   <%= f.text_area :body %>
+   <div class="field-label"><%= f.label :body %></div>
+   <div class="field-area"><%= f.text_area :body %></div>
   </div>
   <div class="btn"><%= f.submit 'Create Book' %></div>
 <% end %>

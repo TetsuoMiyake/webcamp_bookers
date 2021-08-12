@@ -14,11 +14,18 @@
  *= require_self
  */
 
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
+ /*全体適用 */
+
+p, ol, ul, li, td, strong, th, .main-list, .post, .error-title, .field-label, .success {
+ 	font-family: verdana, arial, helvetica, sans-serif;
+ }
 
 p {
 	font-size: 13px;
@@ -28,17 +35,33 @@ body, .top-comment, .post-title, .post-body {
 	margin: 33px;
 }
 
+/* メインページ　*/
+
 .main-list, .post {
 	margin: 26px 0;
 }
 
+/* 投稿一覧　*/
+
 th {
 	padding: 1px 1px 5px 1px;
+	font-size: 13px;
 }
 
 td {
 	padding: 1px 5px 7px 5px;
+	font-size: 13px;
 }
+
+h1 {
+	font-size: 26px;
+}
+
+h2 {
+	font-size: 19.5px;
+}
+
+/* 新規投稿　*/
 
 .field-edit {
 	margin-bottom: 10px;
@@ -48,34 +71,69 @@ td {
 	margin-bottom: 10px;
 }
 
+.post {
+	margin: 16.185px 0;
+}
+
+.field-label, .field-area {
+	font-size: 13px;
+}
+
+.field-label {
+	height: 22px;
+}
+
+.field-box {
+	height: 25px;
+}
+
+.field {
+	margin-bottom: 10px;
+}
+
+input[type="text"] {
+	height: 21px;
+	width: 153px;
+}
+
+input[type="submit"] {
+	padding: 1px 6px;
+}
+
+/* 投稿内容エラー　*/
+
 .field_with_errors {
+	padding: 2px;
 	background-color: #ff0000;
 	display: table;
 }
 
 li {
 	list-style-position: inside;
+	font-size: 12px;
 }
 
 ul {
 	margin: 33px;
+	padding-left: 40px;
 }
 
 .error-box {
 	width: 450px;
 	border: solid 2px red;
-	background-color: gray;
+	background-color: #F0F0F0;
 	margin-bottom: 20px;
 }
 
 .error-title {
 	font-size: 12px;
 	padding: 5px 5px 5px 15px;
-	background-color: red;
+	background-color: #c00;
 	color: white;
 }
 
-.post {
-	margin: 16.185px 0;
+.success {
+	color: green;
+	font-size: 13px;
+	margin: 33px;
 }
-

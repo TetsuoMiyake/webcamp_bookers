@@ -50,6 +50,7 @@ td {
 
 .field_with_errors {
 	background-color: #ff0000;
+	display: table;
 }
 
 li {
